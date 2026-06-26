@@ -1,17 +1,16 @@
-// ── Orb Canvas (Infinite Craft style, potato-PC friendly) ──────────
 (function () {
   const canvas = document.getElementById('orbs');
   const ctx = canvas.getContext('2d');
 
   let W, H, orbs = [], connections = [];
-  const ORB_COUNT = 28;         // low count = low CPU
-  const CONNECT_DIST = 180;     // max distance to draw a line
-  const SPEED = 0.25;           // slow drift
+  const ORB_COUNT = 28;       
+  const CONNECT_DIST = 180;    
+  const SPEED = 0.25;         
 
   const COLORS = [
-    'rgba(79, 195, 247,',       // cyan
-    'rgba(124, 109, 250,',      // violet
-    'rgba(100, 180, 255,',      // blue
+    'rgba(79, 195, 247,',     
+    'rgba(124, 109, 250,',      
+    'rgba(100, 180, 255,',      
   ];
 
   function resize() {
@@ -30,7 +29,7 @@
       this.vy = (Math.random() - 0.5) * SPEED;
       this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
       this.alpha = Math.random() * 0.5 + 0.3;
-      // Pulse
+
       this.pulseSpeed = Math.random() * 0.02 + 0.005;
       this.pulsePhase = Math.random() * Math.PI * 2;
     }
@@ -38,10 +37,10 @@
     update(t) {
       this.x += this.vx;
       this.y += this.vy;
-      // Bounce off edges
+
       if (this.x < 0 || this.x > W) this.vx *= -1;
       if (this.y < 0 || this.y > H) this.vy *= -1;
-      // Pulse alpha
+
       this.currentAlpha = this.alpha + Math.sin(t * this.pulseSpeed + this.pulsePhase) * 0.15;
     }
 
@@ -61,7 +60,7 @@
 
   let t = 0;
   let lastFrame = 0;
-  const TARGET_FPS = 40; // cap at 40fps to save CPU
+  const TARGET_FPS = 40; 
   const FRAME_MIN = 1000 / TARGET_FPS;
 
   function animate(now) {
@@ -72,7 +71,6 @@
 
     ctx.clearRect(0, 0, W, H);
 
-    // Draw connections first
     for (let i = 0; i < orbs.length; i++) {
       for (let j = i + 1; j < orbs.length; j++) {
         const dx = orbs[i].x - orbs[j].x;
@@ -90,7 +88,7 @@
       }
     }
 
-    // Draw orbs
+    
     for (const orb of orbs) {
       orb.update(t);
       orb.draw();
@@ -99,7 +97,7 @@
 
   window.addEventListener('resize', () => {
     resize();
-    // Re-clamp orbs inside new bounds
+ 
     for (const orb of orbs) {
       orb.x = Math.min(orb.x, W);
       orb.y = Math.min(orb.y, H);
@@ -111,7 +109,7 @@
 })();
 
 
-// ── Scroll fade-in ─────────────────────────────────────────────────
+
 (function () {
   const els = document.querySelectorAll('.fade-in');
   if (!els.length) return;
@@ -133,7 +131,7 @@
 })();
 
 
-// ── Nav scroll style ───────────────────────────────────────────────
+
 (function () {
   const nav = document.querySelector('.nav');
   window.addEventListener('scroll', () => {
@@ -144,7 +142,7 @@
 })();
 
 
-// ── Smooth anchor scroll ───────────────────────────────────────────
+
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
