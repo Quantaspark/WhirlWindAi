@@ -1,4 +1,4 @@
-/* ── Reset & Base ─────────────────────────────────────── */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Canvas ───────────────────────────────────────────── */
+
 #orbs {
   position: fixed;
   inset: 0;
@@ -32,11 +32,10 @@ body {
   pointer-events: none;
 }
 
-/* ── Layout ───────────────────────────────────────────── */
 main, nav, footer { position: relative; z-index: 1; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-/* ── Nav ──────────────────────────────────────────────── */
+
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -98,7 +97,6 @@ main, nav, footer { position: relative; z-index: 1; }
   color: var(--accent) !important;
 }
 
-/* ── Hero ─────────────────────────────────────────────── */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -158,7 +156,6 @@ main, nav, footer { position: relative; z-index: 1; }
   animation: fadeUp 0.8s 0.8s forwards;
 }
 
-/* ── Buttons ──────────────────────────────────────────── */
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -192,7 +189,6 @@ main, nav, footer { position: relative; z-index: 1; }
   border-color: rgba(255,255,255,0.15);
 }
 
-/* ── Labels ───────────────────────────────────────────── */
 .label {
   display: inline-block;
   font-family: var(--mono);
@@ -203,7 +199,6 @@ main, nav, footer { position: relative; z-index: 1; }
   margin-bottom: 1rem;
 }
 
-/* ── Section headings ─────────────────────────────────── */
 h2 {
   font-family: var(--display);
   font-size: clamp(2rem, 4vw, 3rem);
@@ -213,7 +208,6 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* ── About ────────────────────────────────────────────── */
 .about {
   padding: 8rem 0;
   border-top: 1px solid var(--border);
@@ -256,7 +250,6 @@ h2 {
   color: var(--text-dim);
 }
 
-/* ── Research ─────────────────────────────────────────── */
 .research {
   padding: 8rem 0;
   border-top: 1px solid var(--border);
@@ -304,7 +297,6 @@ h2 {
   line-height: 1.6;
 }
 
-/* ── CTA Strip ────────────────────────────────────────── */
 .cta-strip {
   padding: 7rem 0;
   border-top: 1px solid var(--border);
@@ -318,7 +310,6 @@ h2 {
 }
 .cta-strip h2 strong { color: var(--text); font-weight: 700; }
 
-/* ── Footer ───────────────────────────────────────────── */
 .footer {
   border-top: 1px solid var(--border);
   padding: 2.5rem 0;
@@ -357,7 +348,6 @@ h2 {
 }
 .footer a:hover { color: var(--accent); }
 
-/* ── Scroll animations ────────────────────────────────── */
 .fade-in {
   opacity: 0;
   transform: translateY(28px);
@@ -368,13 +358,11 @@ h2 {
   transform: translateY(0);
 }
 
-/* ── Keyframes ────────────────────────────────────────── */
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
   from { opacity: 0; transform: translateY(24px); }
 }
 
-/* ── Responsive ───────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav { padding: 1rem 1.5rem; }
   .nav__links { display: none; }
@@ -384,7 +372,6 @@ h2 {
   .footer__inner { flex-direction: column; text-align: center; }
 }
 
-/* ── Reduced motion ───────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   .fade-in { opacity: 1; transform: none; }
