@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WhirlwindAI — Independent AI research focused on compact language models and practical machine learning.">
+  <title>WhirlwindAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="orbs" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a href="#" class="nav__logo">
+      <img src="https://huggingface.co/WhirlwindAI/resolve/main/logo.png"
+           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='inline'"
+           alt="WhirlwindAI logo" width="32" height="32">
+      <span id="logo-fallback" style="display:none">⟳</span>
+      <span>WhirlwindAI</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="https://huggingface.co/WhirlwindAI" target="_blank" rel="noopener" class="nav__hf">HuggingFace ↗</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Independent AI Research</p>
+        <h1 class="hero__title">Building<br><span>efficient</span><br>intelligence.</h1>
+        <p class="hero__sub">Compact language models, multilingual systems,<br>and practical machine learning.</p>
+        <div class="hero__btns">
+          <a href="#research" class="btn btn--primary">Explore Research</a>
+          <a href="https://huggingface.co/WhirlwindAI" target="_blank" rel="noopener" class="btn btn--ghost">Hugging Face ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__left fade-in">
+            <span class="label">About</span>
+            <h2>Small models.<br>Big ideas.</h2>
+          </div>
+          <div class="about__right fade-in">
+            <p>WhirlwindAI is an independent research organisation building open-source AI that punches above its weight. We believe the future of machine learning isn't bigger — it's <em>smarter</em>.</p>
+            <p>Everything we build is open, documented, and designed to run anywhere — from T4 GPUs to CPU inference on a budget machine.</p>
+            <div class="stats">
+              <div class="stat fade-in"><span class="stat__n">15+</span><span class="stat__l">Languages</span></div>
+              <div class="stat fade-in"><span class="stat__n">Open</span><span class="stat__l">Source</span></div>
+              <div class="stat fade-in"><span class="stat__n">0</span><span class="stat__l">Bloat</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research" id="research">
+      <div class="container">
+        <div class="section-head fade-in">
+          <span class="label">Research</span>
+          <h2>Where we focus.</h2>
+        </div>
+        <div class="cards">
+          <article class="card fade-in">
+            <div class="card__num">01</div>
+            <h3>Compact LMs</h3>
+            <p>Fine-tuning small foundation models to outperform larger counterparts on targeted tasks.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card__num">02</div>
+            <h3>Multilingual</h3>
+            <p>Translation systems covering 15+ languages without trillion-parameter overhead.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card__num">03</div>
+            <h3>Practical ML</h3>
+            <p>Every project targets real deployment constraints — free-tier GPUs, CPU inference, open weights.</p>
+          </article>
+          <article class="card fade-in">
+            <div class="card__num">04</div>
+            <h3>Reasoning</h3>
+            <p>Structured approaches to classification and semantic understanding at the edge.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container fade-in">
+        <h2>All models are open source.</h2>
+        <a href="https://huggingface.co/WhirlwindAI" target="_blank" rel="noopener" class="btn btn--primary">
+          Browse on Hugging Face ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__brand">
+          <img src="https://huggingface.co/WhirlwindAI/resolve/main/logo.png"
+               onerror="this.style.display='none'" alt="" width="20" height="20">
+          WhirlwindAI
+        </span>
+        <span class="footer__copy">© 2026 · Open source, always.</span>
+        <a href="https://huggingface.co/WhirlwindAI" target="_blank" rel="noopener">Hugging Face ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
